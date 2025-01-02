@@ -1,0 +1,152 @@
+{
+    "data" : {
+        "tiffins": {
+            "Aapam" : {
+                "title" : "Aapam",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAGf4YfKJ6_Zj9RNI4fELwh1n316O7aI-nQ&s"
+            },
+            "idli" : {
+                "title" : "Idli",
+                "image" : "https://www.awesomecuisine.com/wp-content/uploads/2007/11/Idli-with-sambar-and-chutney.jpg"
+            },
+            "Tumbler Idlis" : {
+                "title" : "Tumbler Idlis",
+                "image" : "https://c.ndtvimg.com/2019-12/81avara8_idli_625x300_16_December_19.jpg"
+            },
+            "Masala dosa" : {
+                "title" : "Masala dosa",
+                "image" : "https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+            },
+            "Neer dosa" : {
+                "title" : "Neer Dosa",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3slB3bnKtSe5dNUw_Wug6HisJ8qgo4yeCQ&s"
+            },
+            "Poori" : {
+                "title" : "Poori",
+                "image" : "https://priyakitchenette.com/wp-content/uploads/2013/12/how-to-make-Indian-poori.jpg"
+            },
+            "Mysore Bonda" : {
+                "title" : "Mysore Bonda",
+                "image" : "https://www.awesomecuisine.com/wp-content/uploads/2016/04/mysore-bonda.jpg"
+            }
+
+        },
+        "biryanis": {
+            "Hyderabadi Biryani" : {
+                "id" : "B01",
+                "title" : "Hyderabadi Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKoGhBAgVsp9Ut2CV5J0zjcQiStoSsoGS2hQ&s"
+            },
+            "Veg Biryani" : {
+                "id" : "B02",
+                "title" : "Hyderabadi Veg Biryani",
+                "image" : "https://b.zmtcdn.com/data/dish_photos/5df/341fc6fd937a4f3747a0f8637b4315df.jpeg?fit=around|130:130&crop=130:130;*,*"
+            },
+            "Daal Biryani" : {
+                "id" : "B03",
+                "title" : "Daal Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfGCV8_hNWM3oKz86N0FFkIEHhBLn55SC-A&s"
+            },
+            "Non-vegetarian Bhatkali biryani" : {
+                "id" : "B04",
+                "title" : "Non-vegetarian Bhatkali biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsB9e6TMWOBI_2iRHvt0GWOVy0VgG_6CBogA&s"
+            },
+            "Kacchi Biryani" : {
+                "id" : "B05",
+                "title" : "Kacchi Biryani",
+                "image" : "https://onestophalal.com/cdn/shop/articles/kacchi_biryani-1692585188684_1200x.jpg?v=1692585303"
+            },
+            "Lucknowi (Awadhi) Biryani" : {
+                "id" : "B06",
+                "title" : "Lucknowi (Awadhi) Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvqNWXw2OgXtPKfm1WJ69c27Y5Bopw6xLcQ&s"
+            },
+            "Moradabadi Biryani" : {
+                "id" : "B07",
+                "title" : "Moradabadi Biryani",
+                "image" : "https://c.ndtvimg.com/2022-03/sv8269ig_muradabadi-biryani_625x300_11_March_22.jpg"
+            },
+            "Calcutta Biryani" : {
+                "id" : "B08",
+                "title" : "Calcutta Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWr5LFFhBrOv2zRl2iglZ9yBk7Uq0YfZctKQ&s"
+            },
+            "Sindhi Biryani" : {
+                "id" : "B09",
+                "title" : "Sindhi Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ19T14uiMLJO3uyO7ms9T9RF85Q1ZyHjueZA&s"
+            },
+            "Memoni Biryani" : {
+                "id" : "B10",
+                "title" : "Memoni Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh-jBSWE5inHiaLhLi7fd59IUXHpRPUi2arg&s"
+            },
+            "Tahari" : {
+                "id" : "B11",
+                "title" : "Tahari Biryani",
+                "image" : "https://www.munatycooking.com/wp-content/uploads/2024/10/Mutton-Tahari-Image-4.jpg"
+            },
+            "Danbauk" : {
+                "id" : "B12",
+                "title" : "Danbauk Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREP4lGG_ayX0yR0V8QtA3_P26dx2HeUFvjdA&s"
+            },
+            "Thai Biryani" : {
+                "id" : "B13",
+                "title" : "Thai Biryani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-Si_tniYqz2GfyH8PCawqE47uECyL8j3GQ&s"
+            },
+            "Sri Lankan Biryani" : {
+                "id" : "B14",
+                "title" : "Sri Lankan Biryani",
+                "image" : "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/21/98/76/picXm4Quy.jpg"
+            },
+            "Dam Pokht/Dam-pokhtak" : {
+                "id" : "B15",
+                "title" : "Dam-pokhtak Biryani",
+                "image" : "https://i.pinimg.com/736x/9c/69/88/9c69889ccdedf4e3536c35446f1f9eff.jpg"
+            },
+            "Iraqi Biryani" : {
+                "id" : "B16",
+                "title" : "Iraqi Biryani",
+                "image" : "https://cdn.shopify.com/s/files/1/0515/1997/9679/files/Screen_Shot_2023-07-21_at_12.32.08_AM_480x480.png?v=1689921582"
+            },
+            "Malaysia’s Nasi Beriani" : {
+                "id" : "B17",
+                "title" : "Nasi Beriani",
+                "image" : "https://i.ytimg.com/vi/vzX6kPTvbXw/maxresdefault.jpg"
+            },
+            "Singapore's briyani" : {
+                "id" : "B18",
+                "title" : "Singapore's Briyani",
+                "image" : "https://images.squarespace-cdn.com/content/v1/578753d7d482e9c3a909de40/1593507839786-XPLAO6XIL1TBAMI75N4W/IMG_0330.jpg?format=2500w"
+            },
+            "Thallapakatti Briyani" : {
+                "id" : "B19",
+                "title" : "Thallapakatti Briyani",
+                "image" : "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/afrt3btwutvcjpdrod6u"
+            },
+            "Dindigul Biriyani" : {
+                "id" : "B20",
+                "title" : "Dindigul Briyani",
+                "image" : "https://shop.cookdtv.com/cdn/shop/files/DindigulBiryani_c79feb5e-acab-4190-b747-36762a811e7d_1080x.jpg?v=1733917322"
+            },
+            "Baluchi Biriyani" : {
+                "id" : "B21",
+                "title" : "Baluchi Briyani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjsuaSDMZW3oaWmbpVnDTW_M2g7s9AJj9bEg&s" 
+            },
+            "Fish Biriyani" : {
+                "id" : "B22",
+                "title" : "Fish Briyani",
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3TQap_pt2fqNJcdDWS5Tsy-7rmRXgxxI7A&s"
+            },
+            "Bombay Biriyani" : {
+                "id" : "B23",
+                "title" : "Bombay Briyani",
+                "image" : "https://img-global.cpcdn.com/recipes/6ad58824416d896e/1200x630cq70/photo.jpg"
+            }
+        }
+    }
+}

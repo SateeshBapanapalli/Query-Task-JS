@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4a90e2;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #357abd;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+      }
+
+      .card {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-image {
+        position: relative;
+        padding-bottom: 100%; /* Creates a square aspect ratio */
+      }
+
+      .card-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .card:hover .card-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .card-title {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover .card-title {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .error-message {
+        text-align: center;
+        color: #ff4444;
+        padding: 20px;
+      }
+
+      .loading {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="./main.html" class="back-btn">Back to Menu</a>
+      <h1 id="itemTitle">Loading...</h1>
+      <div id="itemDetails"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const item = urlParams.get("item");
+        const itemTitle = document.getElementById("itemTitle");
+        const itemDetails = document.getElementById("itemDetails");
+
+        // Set initial page state
+        if (item === "biryani") {
+          itemTitle.textContent = "Biryanis";
+          itemDetails.innerHTML =
+            '<div class="loading">Loading biryanis...</div>';
+        } else if (item === "tiffins") {
+          itemTitle.textContent = "Tiffins";
+          itemDetails.innerHTML =
+            '<div class="loading">Loading tiffins...</div>';
+        } else {
+          itemTitle.textContent = "Item not found";
+          itemDetails.innerHTML =
+            '<div class="error-message">Please return to the main menu and select a valid item.</div>';
+          return;
+        }
+
+
+        function createCard(item) {
+          return `
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="${item.image}" alt="${item.title}">
+                            <div class="card-overlay">
+                                <h3 class="card-title">${item.title}</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        }
+
+        function displayItems(data) {
+          const gridContainer = document.createElement("div");
+          gridContainer.className = "grid-container";
+
+          if (item === "biryani") {
+            const biryanis = data.biryanis;
+            Object.values(biryanis).forEach((biryani) => {
+              gridContainer.innerHTML += createCard(biryani);
+            });
+          } else if (item === "tiffins") {
+            const tiffins = data.tiffins;
+            Object.values(tiffins).forEach((tiffin) => {
+              gridContainer.innerHTML += createCard(tiffin);
+            });
+          }
+
+          itemDetails.innerHTML = "";
+          itemDetails.appendChild(gridContainer);
+        }
+
+        // Fetch data from json
+        fetch("http://localhost:5000/data") 
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            displayItems(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            itemDetails.innerHTML = `
+                        <div class="error-message">
+                            Sorry, there was an error loading the items. Please try again later.
+                        </div>
+                    `;
+          });
+      });
+    </script>
+  </body>
+</html>

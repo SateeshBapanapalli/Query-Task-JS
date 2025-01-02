@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .food-item{
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .food-item:hover{
+            transform: scale(2);
+        }
+
+        img{
+            width: 150px;
+            height: 100px;
+            border-radius: 1%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h3{
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Select Your Food</h2>
+    </header>
+
+    <main>
+        <section class="container">
+            <section class="food-item" onclick="navigateToDisplay('biryani')">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/RX_THUMBNAIL/IMAGES/VENDOR/2024/5/9/33282528-7b2c-458b-ace7-76ce58009158_1854.JPG" alt="biryani">
+                <h3>Biryani</h3>
+            </section>
+            <section class="food-item" onclick="navigateToDisplay('tiffins')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaM6yQnPEqn57D-A6NlpG0vaybh75Rz9ZelA&s" alt="tiffins">
+                <h3>Tiffins</h3>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        function navigateToDisplay(item){
+            window.location.href = `display.html?item=${item}`
+        }
+    </script>
+
+    
+</body>
+</html>
