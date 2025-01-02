@@ -134,6 +134,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const urlParams = new URLSearchParams(window.location.search);
         const item = urlParams.get("item");
+        // console.log(item)
         const itemTitle = document.getElementById("itemTitle");
         const itemDetails = document.getElementById("itemDetails");
 
@@ -153,7 +154,6 @@
           return;
         }
 
-
         function createCard(item) {
           return `
                     <div class="card">
@@ -168,16 +168,20 @@
         }
 
         function displayItems(data) {
+          // console.log(data.data.biryanis);
           const gridContainer = document.createElement("div");
           gridContainer.className = "grid-container";
 
           if (item === "biryani") {
-            const biryanis = data.biryanis;
+            const biryanis = data?.data?.biryanis;
+            // console.log(biryanis)
             Object.values(biryanis).forEach((biryani) => {
               gridContainer.innerHTML += createCard(biryani);
             });
           } else if (item === "tiffins") {
-            const tiffins = data.tiffins;
+            const tiffins = data?.data?.tiffins;
+            // console.log(tiffins);
+            
             Object.values(tiffins).forEach((tiffin) => {
               gridContainer.innerHTML += createCard(tiffin);
             });
@@ -188,13 +192,8 @@
         }
 
         // Fetch data from json
-        fetch("https://sateeshbapanapalli.github.io/JS-Task/data.json") 
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
+        fetch("https://sateeshbapanapalli.github.io/JS-Task/data.json")
+          .then((res) => res.json())
           .then((data) => {
             displayItems(data);
           })
