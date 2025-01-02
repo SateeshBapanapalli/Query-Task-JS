@@ -188,15 +188,7 @@
         }
 
         // Fetch data from json
-        fetch("https://github.com/SateeshBapanapalli/Query-Task-JS/blob/main/data.json", {
-          method: "GET",
-          mode: 'no-cors',
-          headers: {
-            'Content-Type' : 'application/json',
-            'Access-Control-Allow-Origin' : '*'
-            
-          }
-        }) 
+        fetch("https://sateeshbapanapalli.github.io/JS-Task/data.json") 
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
